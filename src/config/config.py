@@ -8,7 +8,7 @@ from gpu_config.check import GPU_Config
 
 # Dataset configurations
 DATASET = {
-    "path": "D:\GitProject\Bank-Marketing-Campaign-main\Bank-Marketing-Campaign-main\data\Bank.csv",
+    "path": r"D:\GitProject\Bank-Marketing-Campaign-main\Bank-Marketing-Campaign-main\data\Bank.csv",
     "train_split": 0.8,
     "validation_split": 0.1,
     "test_split": 0.1,
@@ -50,6 +50,6 @@ EXPERIMENT = {
 
 #Model Details
 MODEL_DETAILS = {
-    "trained_model":"D:\GitProject\Bank-Marketing-Campaign-main\Bank-Marketing-Campaign-main\saved_model\model.h5",
-    "preprocessed_pipeline":"D:\GitProject\Bank-Marketing-Campaign-main\Bank-Marketing-Campaign-main\saved_model\preprocessing_pipeline.pkl"
+    "trained_model": r"D:\GitProject\Bank-Marketing-Campaign-main\Bank-Marketing-Campaign-main\saved_model\model.h5",
+    "preprocessed_pipeline": r"D:\GitProject\Bank-Marketing-Campaign-main\Bank-Marketing-Campaign-main\saved_model\preprocessing_pipeline.pkl"
 }

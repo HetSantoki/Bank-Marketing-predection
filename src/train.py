@@ -37,6 +37,8 @@ class TrainModel :
         restore_best_weights=False)
 
         self.history = model.fit(X_train,y_train,epochs=self.epochs,batch_size=self.batch_size,validation_data=(self.X_test,self.y_test),callbacks=callback)
-        model.save('model.h5')
+        os.makedirs(os.path.join(os.path.dirname(__file__), '..', 'saved_model'), exist_ok=True)
+        model.save(os.path.join(os.path.dirname(__file__), '..', 'saved_model', 'model.h5'))
+
 
         return self.history

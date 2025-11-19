@@ -4,6 +4,7 @@ github : @SantokiHet
 organization : L.J University
 '''
 
+import os
 import joblib
 import pandas as pd
 from sklearn.pipeline import Pipeline
@@ -17,7 +18,8 @@ class featureEngineering :
         pass
 
     def clean_data(self) :
-        df = pd.read_csv('/home/karan-chauhan/WorkStation/Project/Bank-Marketing-Campaign/Data/bank.csv')
+        df = pd.read_csv(r"D:\GitProject\Bank-Marketing-Campaign-main\Bank-Marketing-Campaign-main\data\Bank.csv")
+
 
         #Rename column name
         df = df.rename(columns={'y':'deposit','housing':'house_loan','loan':'personal_loan','previous':'pre_campaign'})
@@ -69,6 +71,7 @@ class featureEngineering :
 
         smote_df = pd.DataFrame(X_resampled, columns=all_feature_names)
         smote_df['deposit'] = y_resampled
-        joblib.dump(model_pipeline, 'preprocessing_pipeline.pkl')
+        joblib.dump(model_pipeline, os.path.join(os.path.dirname(__file__), '..', 'saved_model', 'preprocessing_pipeline.pkl'))
+
 
         return smote_df

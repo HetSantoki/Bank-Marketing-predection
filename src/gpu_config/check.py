@@ -1,5 +1,5 @@
 '''
-author : santoki het
+author : Santoki het
 github : @SantokiHet
 organization : L.J University
 '''
